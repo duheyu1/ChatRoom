@@ -34,8 +34,8 @@ int main(int argc, char **argv) {
 
 		// check for socket
         if ( FD_ISSET(fd, &rset) ) {
-			sprintf(recvline, "%s", "as: ");
-		    int n = read(fd, &recvline[4], MAXLINE - 4);
+			sprintf(recvline, "%s", "client: ");
+		    int n = read(fd, &recvline[8], MAXLINE - 8);
 		    if (n == 0) {
 			    printf("close normally\n");
 			    exit(0);
@@ -44,7 +44,7 @@ int main(int argc, char **argv) {
 			    perror("failure\n");
 			    exit(-1);
 		    }
-		    recvline[n + 4] = '\0';
+		    recvline[n + 8] = '\0';
 		    fputs(recvline, stdout);
         }
 
