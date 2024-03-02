@@ -9,7 +9,7 @@ server side
 ```bash
 ./server
 ```
-client side(change IPADRESS to the server's ip adress)
+client side(change IPADRESS to the server's ip address)
 ```bash
-./client IPADRESS
+./client IPADDRESS
 ```
